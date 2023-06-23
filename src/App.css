@@ -107,10 +107,10 @@ button:focus {
   justify-content: center;
 }
 .btn-lap {
-  background-color: rgb(83, 124, 185);
+  background-color: rgb(102, 139, 194);
 }
 .btn-lap:hover {
-  background-color: rgb(83, 124, 185);
+  background-color: rgb(40, 100, 190);
 
 } 
 .main-clock {

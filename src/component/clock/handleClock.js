@@ -1,18 +1,21 @@
-import React from "react"
-const Header = (props) => {
+import React, { useRef } from "react"
+
+const HandleClock = (props) => {
     React.useEffect(() => {
         let timerId = setInterval(() => {
             props.setTime(props.time)
         })
         clearInterval(timerId)
     })
+
     return <>
         <h2>Count Up</h2>
-        {!props.clock ? <div id="display">
-            <span>{("0" + Math.floor((props.time / 60000) % 60)).slice(-2)}:</span>
-            <span>{("0" + Math.floor((props.time / 1000) % 60)).slice(-2)}:</span>
-            <span>{("0" + ((props.time / 10) % 100)).slice(-2)}</span>
-        </div>
+        {!props.clock ?
+            <div id="display">
+                <span>{("0" + Math.floor((props.time / 60000) % 60)).slice(-2)}:</span>
+                <span>{("0" + Math.floor((props.time / 1000) % 60)).slice(-2)}:</span>
+                <span>{("0" + ((props.time / 10) % 100)).slice(-2)}</span>
+            </div>
             :
             <div className="main-clock">
                 <div className="clock">
@@ -36,7 +39,6 @@ const Header = (props) => {
                     <span className="eleven">55</span>
                 </div>
             </div>}
-        {!props.thems ? <button onClick={props.themeMode}>Dark</button> : <button onClick={props.themeMode}>Light</button>}
     </>
 }
-export default Header
+export default HandleClock
