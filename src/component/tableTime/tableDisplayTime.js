@@ -9,7 +9,7 @@ const TableDisplayTime = ({times}) => {
                             <span>{item.getLapTime()}</span>
                         </div>
                     </div>
-                })}
+                }).reverse()}
             </div>
         </div>
     )

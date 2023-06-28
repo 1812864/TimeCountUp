@@ -1,22 +1,16 @@
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 3px rgb(68, 68, 68); 
+  box-shadow: inset 0 0 3px rgb(68, 68, 68);
   border-radius: 10px;
 }
- 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(56, 56, 56); 
+  background: rgb(56, 56, 56);
   border-radius: 10px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #242424; 
+  background: #242424;
 }
 h2 {
   margin: 0;
@@ -29,7 +23,6 @@ h2 {
   margin: 0;
   text-align: center;
 }
-
 .Timers button {
   margin: 15px;
 }
@@ -37,18 +30,15 @@ h2 {
   background-color: rgb(73, 73, 73);
   color: white;
 }
-
 .Timers.dark .clock {
   color: white;
 }
-
 #display {
   height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 #display span {
   font-size: 100px;
 }
@@ -62,9 +52,8 @@ h2 {
 #buttons button:nth-child(1) {
   width: 70px;
   height: 70px;
-  border-radius: 50%
+  border-radius: 50%;
 }
-
 button {
   font-size: 16px;
   background-color: rgb(217, 60, 35);
@@ -111,8 +100,7 @@ button:focus {
 }
 .btn-lap:hover {
   background-color: rgb(40, 100, 190);
-
-} 
+}
 .main-clock {
   height: 350px;
 }
@@ -172,8 +160,6 @@ button:focus {
   left: 50%;
   transform-origin: bottom;
 }
-
-
 
 .clock span {
   position: absolute;

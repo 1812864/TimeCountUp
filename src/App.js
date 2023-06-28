@@ -80,13 +80,13 @@ const App = () => {
   const theme = 'dark'
 
   return (
-    <div className={`Timers ${!!thems ? theme : ''}`}>
+    <div className={`Timers ${!!thems && theme}`}>
       <HandleClock time={time} themeMode={themeMode} thems={thems} clock={displayClock} />
-      {!!thems ? <Button onClick={themeMode} lable='Dark' /> : <Button onClick={themeMode} lable='Light' />}
-      {!!displayClock ? <Button onClick={clockOrTimer} lable='Clock' /> : <Button onClick={clockOrTimer} lable='Time' />}
+      {!thems ? <Button onClick={themeMode} lable='Dark' /> : <Button onClick={themeMode} lable='Light' />}
+      {!displayClock ? <Button onClick={clockOrTimer} lable='Clock' /> : <Button onClick={clockOrTimer} lable='Time' />}
       <div id="buttons">
-        {!!runTimeOn ? <Button lable='Reset' onClick={handleBtnReset} /> : <Button className='btn-lap' lable='Lap' onClick={handleBtnLaps} />}
-        {!!runTimeOn ? <Button lable='Start' onClick={handleBtnStart} /> : <Button lable='Stop' onClick={handleBtnStop} />}
+        {!runTimeOn ? <Button lable='Reset' onClick={handleBtnReset} /> : <Button className='btn-lap' lable='Lap' onClick={handleBtnLaps} />}
+        {!runTimeOn ? <Button lable='Start' onClick={handleBtnStart} /> : <Button lable='Stop' onClick={handleBtnStop} />}
         <TableDisplayTime times={getTimes} />
       </div>
     </div>
